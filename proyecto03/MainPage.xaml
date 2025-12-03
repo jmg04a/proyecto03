@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto03.MainPage"
+             BackgroundColor="#1e1e1e">
+
+    <Grid RowDefinitions="Auto, *, Auto"
+          ColumnDefinitions="*, Auto, *"
+          Padding="20"
+          RowSpacing="20"
+          ColumnSpacing="20">
+
+        <Entry x:Name="textBoxEquipo1"
+               Grid.Row="0" Grid.Column="0"
+               Placeholder="Equipo 1"
+               TextColor="White"
+               PlaceholderColor="Gray"
+               HorizontalTextAlignment="Center"/>
+
+        <Label x:Name="LblContra"
+               Grid.Row="0" Grid.Column="1"
+               Text="Contra"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Entry x:Name="textBoxEquipo2"
+               Grid.Row="0" Grid.Column="2"
+               Placeholder="Equipo 2"
+               TextColor="White"
+               PlaceholderColor="Gray"
+               HorizontalTextAlignment="Center"/>
+
+
+        <Label x:Name="LblContadorIzq"
+               Grid.Row="1" Grid.Column="0"
+               Text="00"
+               FontSize="120"
+               FontAttributes="Bold"
+               TextColor="#62fbd7"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Label x:Name="LblSeparador"
+               Grid.Row="1" Grid.Column="1"
+               Text=":"
+               FontSize="120"
+               FontAttributes="Bold"
+               TextColor="#ffffff"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Label x:Name="LblContadorDer"
+               Grid.Row="1" Grid.Column="2"
+               Text="00"
+               FontSize="120"
+               FontAttributes="Bold"
+               TextColor="#ff6b6b"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+
+        <HorizontalStackLayout Grid.Row="2" Grid.Column="0" 
+                               Spacing="10" HorizontalOptions="Center">
+
+            <Button Text="+1" Clicked="OnSumarIzq" BackgroundColor="#62fbd7" TextColor="Black" WidthRequest="100"/>
+            <Button Text="-1" Clicked="OnRestarIzq" BackgroundColor="#ffffff" TextColor="Black"/>
+            
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="2" Grid.Column="1" 
+                       Spacing="10" HorizontalOptions="Center">
+
+            <Button Text="Reincio" Clicked="OnReset" BackgroundColor="White" TextColor="Black" WidthRequest="100"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="2" Grid.Column="2" 
+                               Spacing="10" HorizontalOptions="Center">
+
+            <Button Text="+1" Clicked="OnSumarDer" BackgroundColor="#ff6b6b" TextColor="Black" WidthRequest="100"/>
+            <Button Text="-1" Clicked="OnRestarDer" BackgroundColor="#ffffff" TextColor="Black"/>
+
+        </HorizontalStackLayout>
+
+    </Grid>
+
+</ContentPage>
